@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forward Operating Base - Own The Outcome</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .hero {
+            padding: 120px 0 80px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero .motto {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .pillars {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .pillars h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e3c72;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .pillar-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .pillar-card .icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-card h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+        }
+
+        .signup {
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+            padding: 80px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .signup h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .signup-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .btn {
+            background: #ffd700;
+            color: #1e3c72;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: #ffed4e;
+            transform: translateY(-2px);
+        }
+
+        .impact {
+            background: #f8f9fa;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .impact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: #1e3c72;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat {
+            padding: 2rem;
+        }
+
+        .stat .number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #2a5298;
+        }
+
+        .stat .label {
+            font-size: 1.1rem;
+            color: #666;
+        }
+
+        footer {
+            background: #1e3c72;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .hero .motto {
+                font-size: 1.5rem;
+            }
+            
+            .signup-form {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Forward Operating Base</div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Forward Operating Base</h1>
+            <p class="subtitle">Eliminating Veteran Homelessness Through Coordinated Community Resources</p>
+            <p class="motto">"OWN THE OUTCOME"</p>
+        </div>
+    </section>
+
+    <section class="pillars">
+        <div class="container">
+            <h2>Six Pillars of Veteran Support</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="icon">🍽️</div>
+                    <h3>Forward Operating Table</h3>
+                    <p>Food Security - Coordinating restaurant and supermarket resources to ensure no veteran goes hungry.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="icon">🏠</div>
+                    <h3>Forward Operating Housing</h3>
+                    <p>Housing Security - Connecting construction companies with veterans to build sustainable housing solutions.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="icon">🔍</div>
+                    <h3>Forward Operating Intel</h3>
+                    <p>Housing Intelligence - Real estate coordination to match veterans with appropriate housing opportunities.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="icon">💰</div>
+                    <h3>Forward Operating Capital</h3>
+                    <p>Financial Security - Connecting veterans with financing options for housing, vehicles, and business opportunities.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="icon">🚗</div>
+                    <h3>Forward Operating Mobility</h3>
+                    <p>Transportation Independence - Vehicle coordination to ensure veterans have reliable transportation.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="icon">⛽</div>
+                    <h3>Forward Operating Fuel</h3>
+                    <p>Logistics Enablement - Coordinating fuel and logistics to support all other pillars efficiently.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="signup">
+        <div class="container">
+            <h2>Join the Mission</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Be part of the solution. Get updates on our progress and opportunities to help.</p>
+            
+            <form class="signup-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="interest">How would you like to help?</label>
+                    <select id="interest" name="interest">
+                        <option value="">Select your interest</option>
+                        <option value="volunteer">Volunteer Support</option>
+                        <option value="partner">Business Partnership</option>
+                        <option value="investor">Investment Opportunity</option>
+                        <option value="veteran">I'm a Veteran Seeking Support</option>
+                        <option value="updates">Just Keep Me Updated</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location">City, State</label>
+                    <input type="text" id="location" name="location" placeholder="e.g., Colorado Springs, CO">
+                </div>
+                
+                <button type="submit" class="btn">Join the Mission</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="impact">
+        <div class="container">
+            <h2>Our Vision for Impact</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Together, we can create measurable change in veteran communities across America.</p>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="number">40,000+</div>
+                    <div class="label">Veterans experiencing homelessness</div>
+                </div>
+                <div class="stat">
+                    <div class="number">22</div>
+                    <div class="label">Veteran suicides per day</div>
+                </div>
+                <div class="stat">
+                    <div class="number">500+</div>
+                    <div class="label">Cities we plan to serve</div>
+                </div>
+                <div class="stat">
+                    <div class="number">100%</div>
+                    <div class="label">Commitment to veteran success</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Forward Operating Base. All rights reserved.</p>
+            <p>Eliminating veteran homelessness through coordinated community resources.</p>
+            <p><strong>OWN THE OUTCOME</strong></p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form handling (you'll need to connect this to a backend service)
+        document.querySelector('.signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // For now, just show an alert (replace with actual backend integration)
+            alert('Thank you for joining the mission! We\'ll be in touch soon.');
+            
+            // You can integrate with services like:
+            // - Mailchimp API
+            // - ConvertKit
+            // - Airtable
+            // - Google Sheets
+            // - Your own backend
+            
+            console.log('Form submission:', data);
+        });
+    </script>
+</body>
+</html>

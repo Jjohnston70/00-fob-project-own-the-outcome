@@ -1,4 +1,0 @@
-Forward Operating Table (Food Security)
-Call your neighbor (restaurant owner) and say:
-"I'm building a veteran-led platform that eliminates veteran homelessness through coordinated community resources. The first piece is turning restaurant food waste into veteran meals through automation that saves you money, gets you tax write-offs, and makes you a community hero. You've been in business for decades - want to be the first restaurant to prove this works? Can we meet this week?"
-Follow-up: Call local supermarket managers with similar pitch focusing on massive waste reduction and corporate social responsibility impact.

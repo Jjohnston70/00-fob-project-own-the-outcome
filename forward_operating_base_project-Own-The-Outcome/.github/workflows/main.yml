@@ -1,0 +1,80 @@
+name: FOB CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop, 'feature/*', 'pillar/*']
+  pull_request:
+    branches: [main, develop]
+
+env:
+  NODE_VERSION: '18'
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  detect-changes:
+    runs-on: ubuntu-latest
+    outputs:
+      core: ${{ steps.changes.outputs.core }}
+      mobile: ${{ steps.changes.outputs.mobile }}
+      pillars: ${{ steps.changes.outputs.pillars }}
+      infrastructure: ${{ steps.changes.outputs.infrastructure }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dorny/paths-filter@v2
+        id: changes
+        with:
+          filters: |
+            core:
+              - 'packages/fob-core/**'
+              - 'packages/fob-licensing/**'
+            mobile:
+              - 'packages/fob-mobile/**'
+            pillars:
+              - 'pillars/**'
+            infrastructure:
+              - 'deployments/**'
+
+  test-core:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.core == 'true'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run test:core
+      - run: npm run lint:core
+
+  test-pillars:
+    needs: detect-changes
+    if: needs.detect-changes.outputs.pillars == 'true'
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        pillar: [table, housing, intel, capital, mobility, fuel]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run test:pillar:${{ matrix.pillar }}
+
+  build-and-deploy:
+    needs: [test-core, test-pillars]
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and push Docker images
+        run: |
+          docker build -t $REGISTRY/$IMAGE_NAME:latest .
+          docker push $REGISTRY/$IMAGE_NAME:latest
+      - name: Deploy to staging
+        run: |
+          kubectl apply -f deployments/kubernetes/staging/

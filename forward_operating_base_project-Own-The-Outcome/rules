@@ -1,0 +1,256 @@
+# Forward Operating Base - Development Rules & Standards
+
+## CRITICAL: Always Read First
+# Always read memory-bank/architecture.md before writing any code. Include entire database schema.
+# Always read memory-bank/implementation-plan.md before writing any code.
+# After adding a major feature or completing a milestone, update memory-bank/architecture.md.
+# Always read the README.md file first and make updates with checkmarks as we complete tasks and steps.
+# Never move on to next step without asking first.
+# Never edit .env files or dot files without explicit permission.
+
+## Forward Operating Base Development Principles
+
+### Veteran-Centric Development
+# Build systems that honor veteran service and address real veteran needs
+# Prioritize veteran data privacy and security with military-grade standards
+# Design for veteran-led operations with veteran entrepreneurs as system owners
+# Create interfaces that veterans and their supporters can easily understand and use
+# Focus on measurable veteran outcomes: housing, food security, transportation, financial stability
+
+### Military Operational Excellence
+# Follow "Mission First" principle - every decision serves veteran homelessness elimination
+# Implement "Leave No One Behind" - comprehensive veteran support across all pillars
+# Build with "Operational Excellence" - systems that work reliably under pressure
+# Design for "Sustainable Solutions" - self-funding models that scale without dependency
+# Apply "Own the Outcome" mentality - take responsibility for veteran success
+
+### Six-Pillar Coordination
+# Forward Operating Table (Food Security) - Restaurant/supermarket waste → veteran meals
+# Forward Operating Housing (Housing Security) - Builder coordination → veteran housing
+# Forward Operating Intel (Housing Intelligence) - Real estate agents → veteran placement
+# Forward Operating Capital (Financial Security) - Finance brokers → veteran financing
+# Forward Operating Mobility (Transportation Independence) - Car dealerships → veteran vehicles
+# Forward Operating Fuel (Transportation Security) - Fuel suppliers → logistics enablement
+
+## Code Style & Architecture Standards
+
+### Enterprise-Grade Development for SMB Partners
+# Write code that restaurant owners, builders, and agents can understand
+# Include comprehensive logging for troubleshooting and optimization
+# Create modular components that work across all 6 pillars
+# Document business logic and veteran-specific requirements clearly
+# Design for multi-city deployment and veteran entrepreneur ownership
+
+### Technology Excellence Standards
+# Cloud-native architecture (AWS) for scalability and reliability
+# API-first design for seamless partner integrations
+# Mobile-responsive interfaces for veterans and partners
+# Real-time coordination for time-sensitive operations (food delivery, housing, emergencies)
+# Multi-tenant support for city licensing from day one
+
+### Security & Privacy Requirements
+# Veteran data protection with HIPAA-level security standards
+# Encrypted data at rest and in transit for all veteran information
+# Role-based access control with principle of least privilege
+# Complete audit trails for compliance and accountability
+# Veteran consent management for data sharing between pillars
+
+## Development Workflow for Forward Operating Base
+
+### Guided Development Approach (RECOMMENDED)
+# Option B: Guided Approach 🎯 - Pair programming buddy system
+# Start with the absolute basics and build complexity gradually
+# Walk through each step with specific commands and explanations
+# Debug issues together as they come up
+# Celebrate the wins along the way
+# Track everything for learning and investor documentation
+# Focus on understanding over speed - build knowledge while building product
+
+### Phase-Based Development Approach
+# Phase 1: Legal Foundation & MVP (Months 1-3)
+# Phase 2: Local Ecosystem Completion (Months 4-9)
+# Phase 3: System Optimization & Expansion Prep (Months 10-12)
+# Phase 4: Regional Expansion (Months 13-18)
+# Phase 5: Corporate Scaling & National Prep (Months 19-24)
+# Phase 6: National Expansion & Exit Prep (Months 25-36)
+
+### Pillar Development Priority
+# Start with Forward Operating Table (food security) - immediate veteran impact
+# Integrate Forward Operating Intel (housing intelligence) - veteran placement
+# Add Forward Operating Capital (financial security) - remove barriers
+# Complete with Forward Operating Mobility (transportation) - employment access
+# Support with Forward Operating Housing (construction) - permanent solutions
+# Enable with Forward Operating Fuel (logistics) - sustainable operations
+
+### Cross-Pillar Integration Requirements
+# Shared veteran profiles accessible across all pillars
+# Real-time coordination for veteran service delivery
+# Impact tracking and outcome measurement across all services
+# Partner coordination to maximize veteran support effectiveness
+# Financial tracking for partner ROI and veteran cost savings
+
+## Partner Integration Standards
+
+### Restaurant & Supermarket Integration (Forward Operating Table)
+# POS system integration with Square, Toast, Clover, major platforms
+# Real-time inventory tracking and donation optimization
+# Food safety compliance and temperature monitoring
+# Automated tax benefit calculation and documentation
+# Route optimization for efficient pickup and delivery
+
+### Builder & Construction Integration (Forward Operating Housing)
+# Project management integration with Procore, PlanGrid, construction tools
+# Material donation tracking and volunteer coordination
+# Construction timeline optimization and milestone tracking
+# Quality control and safety compliance monitoring
+# Veteran housing readiness assessment and move-in coordination
+
+### Real Estate Agent Integration (Forward Operating Intel)
+# MLS integration for property search and market intelligence
+# Veteran client CRM enhancement and property matching
+# Market analysis for veteran affordability and accessibility
+# Application assistance and lease negotiation support
+# Coordination with Forward Operating Capital for financing
+
+### Finance Broker Integration (Forward Operating Capital)
+# VA loan optimization and credit improvement tracking
+# Integration with veteran-friendly lenders and credit bureaus
+# Loan application automation and approval coordination
+# Financial planning and investment guidance for veterans
+# Credit monitoring and debt management support
+
+### Car Dealership Integration (Forward Operating Mobility)
+# Dealership CRM integration for veteran client management
+# Vehicle matching based on veteran needs and budget
+# Financing coordination with Forward Operating Capital
+# Fleet management for Forward Operating Base operations
+# Emergency transportation and crisis response coordination
+
+### Fuel Supplier Integration (Forward Operating Fuel)
+# Corporate partnership management for fuel cost optimization
+# Route optimization for delivery and construction logistics
+# Fleet fuel management and expense tracking
+# Emergency fuel allocation for crisis response
+# Cost savings sharing with operational partners
+
+## Documentation Standards
+
+### Technical Documentation Requirements
+# Complete API documentation for all partner integrations
+# Database schema documentation with veteran data relationships
+# Deployment guides for city licensing and multi-tenant setup
+# Security documentation for veteran data protection compliance
+# Integration guides for existing partner systems
+
+### Operational Documentation
+# Partner onboarding procedures for each pillar
+# Veteran intake and service coordination workflows
+# Quality control and performance monitoring procedures
+# Emergency response and crisis management protocols
+# Impact measurement and outcome reporting standards
+
+### Business Documentation
+# Partner value proposition and ROI calculations
+# City licensing procedures and veteran entrepreneur requirements
+# Corporate partnership development and management guides
+# Grant application templates and foundation relationship materials
+# Exit strategy preparation and valuation documentation
+
+## Testing & Validation Framework
+
+### Veteran Impact Validation
+# Real veteran outcomes measurement - housing, food security, transportation
+# Partner satisfaction and retention tracking
+# Financial performance validation - cost savings, tax benefits, revenue
+# Operational efficiency measurement - coordination speed, service quality
+# Community impact assessment - waste reduction, resource optimization
+
+### Technical Testing Requirements
+# Cross-pillar integration testing for seamless veteran experience
+# Partner system integration testing for reliability
+# Security penetration testing for veteran data protection
+# Performance testing for scale and city licensing deployment
+# Mobile responsiveness testing for veteran and partner access
+
+### Business Model Validation
+# Revenue per partner tracking and optimization
+# City licensing profitability and veteran entrepreneur success
+# Corporate partnership value and expansion potential
+# Impact measurement and social return on investment (SROI)
+# Competitive positioning and intellectual property protection
+
+## Deployment & Operations Standards
+
+### Multi-City Deployment Requirements
+# Automated deployment for new city licensing
+# Local customization while maintaining standard operations
+# Veteran entrepreneur training and certification programs
+# Regional coordination and resource sharing
+# Corporate partnership leverage across multiple markets
+
+### Production Operations Excellence
+# 99.9% uptime for veteran services reliability
+# Real-time monitoring and alerting for critical operations
+# Automated backup and disaster recovery procedures
+# Performance optimization for efficient resource utilization
+# Security monitoring and incident response capabilities
+
+### Veteran Service Delivery Standards
+# <2 hours response time for veteran food coordination
+# <24 hours response time for veteran housing emergencies
+# <1 week average for veteran housing placement process
+# <30 days average for veteran vehicle acquisition
+# 95%+ veteran satisfaction with services across all pillars
+
+## Never Do This - Critical Constraints
+
+### Business Constraints
+# Never compromise veteran data privacy or security
+# Never build solutions that create veteran dependency rather than empowerment
+# Never ignore partner profitability - they must succeed for veterans to succeed
+# Never scale without proven local impact and veteran outcome validation
+# Never proceed without veteran entrepreneur leadership in new cities
+
+### Technical Constraints
+# Never build monolithic systems - maintain pillar independence with coordination
+# Never ignore mobile users - many veterans primarily use smartphones
+# Never deploy without comprehensive monitoring and rollback capabilities
+# Never store veteran data without encryption and access controls
+# Never proceed with integrations without partner system testing
+
+### Operational Constraints
+# Never skip veteran consent for data sharing between pillars
+# Never compromise service quality for expansion speed
+# Never ignore local regulations and compliance requirements
+# Never deploy without emergency response and crisis management procedures
+# Never proceed without documented standard operating procedures
+
+## Success Metrics & Accountability
+
+### Financial Success Metrics
+# Monthly Recurring Revenue (MRR) growth across all pillars
+# Partner retention rate and satisfaction scores
+# Cost per veteran served and outcome achieved
+# Return on investment (ROI) for partners and city licensing
+# Profit margins and cash flow for sustainable operations
+
+### Veteran Impact Metrics
+# Number of veterans housed and housing retention rates
+# Meals provided and food security improvement
+# Veterans with reliable transportation and employment impact
+# Credit score improvement and financial stability
+# Community integration and long-term veteran success
+
+### Operational Excellence Metrics
+# System uptime and performance reliability
+# Partner onboarding success and time to value
+# Cross-pillar coordination efficiency and veteran satisfaction
+# Quality control and service delivery standards
+# Emergency response capability and crisis management effectiveness
+
+---
+
+**Rules Version:** 1.0 for Forward Operating Base  
+**Last Updated:** September 2025  
+**Compliance Required:** All development must follow these standards  
+**Review Authority:** CTO and Operations Manager approval for rule changes
